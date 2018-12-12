@@ -3,6 +3,9 @@
 const berryForm = document.getElementById('berryForm');
 const chatBoxChat = document.getElementById('chatBoxChat');
 
+
+
+
 printBerry('Hello, I am Berry.<br>What page would you like to open?');
 
 berryForm.addEventListener('submit', (event) => {
@@ -19,29 +22,46 @@ berryForm.addEventListener('submit', (event) => {
 
 function response(userInput) {
 
+    let myImage = new Image(100,200);
+    myImage.src = 'emiel.jpg';
+
     printUser(userInput);
 
-    if (userInput === 'menu') {
+    if (userInput === 'lol') {
 
-        printBerry('Here is the menu: LOL');
+        printBerry('I can see trough your camera that you aren\'t lauging at all...');
+    }
+    else if (userInput.includes('sudo')){
+        printBerry('this isn\'t fucking ubuntu brah!');
+    }
 
-        setTimeout(() => {
-            goTo('menu')
-        }, 2500)
+    else if (userInput.includes('sam')){
+        printBerry('Sam iis the man! sam de man die alles can!');
+        printBerry('some even say he conquered a small piece of africa');
+    }
+    else if (userInput.includes('emiel')){
+        printBerry('I know Emiel!<br>Awesome dude for sure, <br>in lands far from here he\'s known as the king of troling..');
+        printBerry('also here is a funny picture of him');
+        printBerry(document.body.appendChild(myImage));
 
-    } else if (userInput === 'exit') {
+    }
+    else if (userInput.includes('bryan')){
+        printBerry('yes, bryan!.. ');
+        printBerry('A most trustworthy fellow! very funy, and not so fond of rasisms..');
+        printBerry('some say he\'s dangerous.. I say, look at this picture');
+    }
 
-        printBerry('You can\'t exit')
+    else if (userInput === 'exit') {
 
-    } else {
+        printBerry('You can\'t exit...<br>You can never exit...')
+
+    }
+    else {
 
         printBerry('You are not authorised to open undefined, fix sÜm undefined permissions first')
 
     }
 
-    function goTo(name) {
-        window.location.href = 'pages/' + name + '/index.html'
-    }
 }
 function clearInput(inputElement) {
     inputElement.value = ''
