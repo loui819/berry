@@ -48,15 +48,20 @@ div.message > div{
     padding: 3px 8px;
     border-radius: 4px;
 }
+
 div.message.user{
     text-align: right;
 }
 div.message.user>div{
+    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24);
     background-color: #c8ffb0;
 }
 div.message.berry{
     text-align: left;
+
 }
 div.message.berry > div {
+    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24);
     background-color: #f2f2f2;
 }
+
