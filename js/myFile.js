@@ -6,7 +6,7 @@ const chatBoxChat = document.getElementById('chatBoxChat');
 
 
 
-printBerry('Hello, I am Berry.<br>What page would you like to open?');
+printBerry('Hello, I am Berry.<br>you appear to be so bored you decided to go to this webpage..<br>I wish you the best of luck talking to me!');
 
 berryForm.addEventListener('submit', (event) => {
 
@@ -64,13 +64,39 @@ function response(userInput) {
         printBerryImage("images/emiel.jpg");
 
     }
+    else if (userInput.includes('jeroen')){
+
+        printBerry('Known for his many quotes, such as:<br> "Black FlipperBaby!..", <br>"Put the lotion in the basket... rub the lotion on the skin"');
+        printBerry('Will murder you if it comes to COD..');
+        printBerryImage("images/jeroen.jpg");
+
+    }
+    else if (userInput.includes('jesper')){
+
+        printBerry('Jesper...');
+        printBerry('the only thing that comes to mind is..');
+        printBerry('intellectual badass!');
+        printBerryImage("images/jesper.jpg");
+    }
     else if (userInput.includes('bryan')){
 
         printBerry('yes, bryan!.. ');
         printBerry('A most trustworthy fellow! very funny, and not so fond of rasisms..');
         printBerry('some say he\'s dangerous.. I say, look at this picture:');
-        printBerryImage("images/bryan.jpg" );
+        printBerryImage("images/bryan.jpg");
 
+    }
+    else if (userInput.includes('laurens')) {
+
+        printBerry('total Fucktard that guy..');
+    }
+    else if (userInput.includes('fuck')) {
+
+        printBerry('don\'t fucking swear you moron..');
+    }
+    else if (userInput.includes('moeder')) {
+
+        printBerry('I will fuck you the mother!');
     }
 
     else if (userInput === 'exit') {
@@ -107,5 +133,5 @@ function print(from, value) {
     chatBoxChat.innerHTML = chatBoxChat.innerHTML + '<div class="message ' + from + '"><div>' + value + '</div></div>';
 }
 function printImage(from, value){
-    chatBoxChat.innerHTML = chatBoxChat.innerHTML + '<div class="message ' + from + '"><div><img width="250" height="250" src=' + value + '/></div></div>';
+    chatBoxChat.innerHTML = chatBoxChat.innerHTML + '<div class="message ' + from + '"><div><img width="250" height="250" src="' + value + '" /></div></div>';
 }
